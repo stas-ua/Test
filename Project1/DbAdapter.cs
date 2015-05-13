@@ -55,39 +55,21 @@ namespace GoogleSync
 
         private  void LoadGoogleSheets()
         {
-            SpreadsheetQuery query = new SpreadsheetQuery();
-            //System.Threading.Thread.Sleep(500);
-            SpreadsheetFeed feed;
-            try {  feed = myService.Query(query); }
-            catch{
-                Console.WriteLine();
-                throw;
-            }
-            
+            SpreadsheetQuery query = new SpreadsheetQuery();            
+            SpreadsheetFeed feed = myService.Query(query);    
 
             foreach (TableMap tblMap in TableMaps)
             {
                 foreach (SpreadsheetEntry entry in feed.Entries)
                 {
                     if (entry.Title.Text == tblMap.googleTableName)
-                    {
-                        //AtomLink link = entry.Links.FindService(GDataSpreadsheetsNameTable.WorksheetRel, null);
-                        //WorksheetQuery wShQuery = new WorksheetQuery(link.HRef.ToString());
-                        //System.Threading.Thread.Sleep(2000);
+                    {                       
+                        WorksheetFeed wShFeed = entry.Worksheets;
 
-                        WorksheetFeed wShFeed; // = myService.Query(wShQuery);
-                        //try { wShFeed = myService.Query(wShQuery); }
-                        //catch
-                        //{
-                        //    Console.WriteLine();
-                        //    throw;
-                        //}
-                        wShFeed = entry.Worksheets;
                         foreach (WorksheetEntry worksheet in wShFeed.Entries)
                         {
                             if (worksheet.Title.Text == tblMap.googleTableSheetName)
-                            {
-                                //AtomLink cellFeedLink = worksheet.Links.FindService(GDataSpreadsheetsNameTable.CellRel, null);
+                            {                                
                                 CellQuery cQuery = new CellQuery(worksheet.CellFeedLink);
                                 //System.Threading.Thread.Sleep(1000);
                                 try { tblMap.cFeed = myService.Query(cQuery); }

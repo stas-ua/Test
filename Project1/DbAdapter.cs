@@ -77,8 +77,7 @@ namespace GoogleSync
                                 {
                                     Console.WriteLine();
                                     throw;
-                                }
-                                
+                                }                                
                             }
                         }
                     }

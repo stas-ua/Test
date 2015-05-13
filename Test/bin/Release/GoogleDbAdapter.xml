@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DbAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TableMaps>
+    <TableMap>
+      <googleTableName>просто таблица</googleTableName>
+      <googleTableSheetName>Лист1</googleTableSheetName>
+      <dbTableName>dbo.tblGoogleTest</dbTableName>
+    </TableMap>
+  </TableMaps>
+  <connectionString>Persist Security Info=False;Integrated Security=True; database=adb;server=INFORMSQL</connectionString>
+  <gAuth>
+    <parameters>
+      <ClientId>200462351526-o7u1bsuavnu6piv4nkjlptoabdpvf006.apps.googleusercontent.com</ClientId>
+      <ClientSecret>QnIVE0HJ2IRvJml_tNm3mfwv</ClientSecret>
+      <RedirectUri>urn:ietf:wg:oauth:2.0:oob</RedirectUri>
+      <AccessType>offline</AccessType>
+      <ResponseType>code</ResponseType>
+      <ApprovalPrompt>auto</ApprovalPrompt>
+      <Scope>https://spreadsheets.google.com/feeds https://docs.google.com/feeds</Scope>
+      <TokenUri>https://accounts.google.com/o/oauth2/token</TokenUri>
+      <AuthUri>https://accounts.google.com/o/oauth2/auth</AuthUri>
+      <AccessCode>4/KLuBGQWLA7tV3Ehb6-IXJCmrnCCGwEe_WUH2PT4dE7M.ojoT7g0iAYUXyjz_MlCJoi16IS64mQI</AccessCode>
+      <AccessToken>ya29.cgEvCx_DjN2tLc2zWD5Uzblip6sBTaJWi9aYREDMXjTtiLA-rfgad2t3Sw7ZzBfYwH7n4ERlvpR9Pw</AccessToken>
+      <TokenType>Bearer</TokenType>
+      <RefreshToken>1/Di6-e1Hckr7jMNLqLIzPOijdecgbQg3fNGRcA3sn4oo</RefreshToken>
+      <TokenExpiry>2015-05-13T16:11:31.1378226+03:00</TokenExpiry>
+    </parameters>
+  </gAuth>
+</DbAdapter>

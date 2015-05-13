@@ -1,0 +1,12 @@
+D:\GoogleSyncProject\Project1\Project1\Test\bin\Debug\UpdGoogle.exe.config
+D:\GoogleSyncProject\Project1\Project1\Test\bin\Debug\UpdGoogle.exe
+D:\GoogleSyncProject\Project1\Project1\Test\bin\Debug\UpdGoogle.pdb
+D:\GoogleSyncProject\Project1\Project1\Test\bin\Debug\GoogleSyncProject.dll
+D:\GoogleSyncProject\Project1\Project1\Test\bin\Debug\Google.GData.Spreadsheets.dll
+D:\GoogleSyncProject\Project1\Project1\Test\bin\Debug\Google.GData.Client.dll
+D:\GoogleSyncProject\Project1\Project1\Test\bin\Debug\Google.GData.Extensions.dll
+D:\GoogleSyncProject\Project1\Project1\Test\bin\Debug\Newtonsoft.Json.dll
+D:\GoogleSyncProject\Project1\Project1\Test\bin\Debug\GoogleSyncProject.pdb
+D:\GoogleSyncProject\Project1\Project1\Test\obj\Debug\gSyncApp.csprojResolveAssemblyReference.cache
+D:\GoogleSyncProject\Project1\Project1\Test\obj\Debug\UpdGoogle.exe
+D:\GoogleSyncProject\Project1\Project1\Test\obj\Debug\UpdGoogle.pdb

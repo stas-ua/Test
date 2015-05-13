@@ -71,7 +71,7 @@ namespace GoogleSync
                             if (worksheet.Title.Text == tblMap.googleTableSheetName)
                             {                                
                                 CellQuery cQuery = new CellQuery(worksheet.CellFeedLink);
-                                //System.Threading.Thread.Sleep(1000);
+                                //System.Threading.Thread.Sleep(1000); //bjbjbsfs
                                 try { tblMap.cFeed = myService.Query(cQuery); }
                                 catch
                                 {

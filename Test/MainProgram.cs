@@ -19,7 +19,7 @@ using GoogleSync;
 
             try
             {                               
-                //hghghgghhgfhfвпаваппотрп
+                //hghghgghhgfhfвпаваппотрп454
                 DbAdapter dbadp = new DbAdapter();
                 
                 if (dbadp.ReadXML())

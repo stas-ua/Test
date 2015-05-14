@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>gooogle images.ico</ApplicationIcon>
+    <ApplicationIcon>ikonka-google.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gooogle images.ico" />
+    <Content Include="ikonka-google.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

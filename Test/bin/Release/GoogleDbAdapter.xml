@@ -2,9 +2,304 @@
 <DbAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <TableMaps>
     <TableMap>
-      <googleTableName>просто таблица</googleTableName>
-      <googleTableSheetName>Лист1</googleTableSheetName>
-      <dbTableName>dbo.tblGoogleTest</dbTableName>
+      <googleTableName>Акц Ренесанс Трейд Крым</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Ренесанс_Трейд_Крым</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Крымопт</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Крымопт</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Атлант-Трейдинг</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Атлант_Трейдинг</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Содружество</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Содружество</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц РЕНЕСАНС ТРЕЙД Киев</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_РЕНЕСАНС_ТРЕЙД_Киев</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Трейд</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Трейд</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Полесье-Продукт</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Полесье_Продукт</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Хайтек</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Хайтек</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Солодкий Свит</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Солодкий_Свит</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Триумф-опт</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Триумф_Опт</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц НС ЗАХИД</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_НС_ЗАХИД</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Кадео</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Кадео</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Корона-Запад</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Корона_Запад</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц КЛАССиК</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_КЛАССиК</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Продмаркет</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Продмаркет</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Аванта Волынь</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Аванта_Волынь</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Пивнич-Центр</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Пивнич_Центр</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Викон</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Викон</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Багира</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Багира</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Довбуш</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Довбуш</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц ЮЛК</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_ЮЛК</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Кошман</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Кошман</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Инкорт</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Инкорт</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Ренесанс-Трейд Днепр</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Ренесанс_Трейд_Днепр</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Негоциант</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Негоциант</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Крок</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Крок</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Логвиновский</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Логвиновский</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Крок (Сумы)</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Крок_Сумы</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Стронг-Сигал</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Стронг_Сигал</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Континент</googleTableName>
+      <googleTableSheetName>Акция - 15</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_15_Континент</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Ренесанс Трейд Крым</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Ренесанс_Трейд_Крым</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Крымопт</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Крымопт</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Атлант-Трейдинг</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Атлант_Трейдинг</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Содружество</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Содружество</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц РЕНЕСАНС ТРЕЙД Киев</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_РЕНЕСАНС_ТРЕЙД_Киев</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Трейд</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Трейд</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Полесье-Продукт</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Полесье_Продукт</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Хайтек</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Хайтек</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Солодкий Свит</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Солодкий_Свит</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Триумф-опт</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Триумф_Опт</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц НС ЗАХИД</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_НС_ЗАХИД</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Кадео</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Кадео</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Корона-Запад</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Корона_Запад</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц КЛАССиК</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_КЛАССиК</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Продмаркет</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Продмаркет</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Аванта Волынь</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Аванта_Волынь</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Пивнич-Центр</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Пивнич_Центр</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Викон</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Викон</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Багира</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Багира</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Довбуш</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Довбуш</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц ЮЛК</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_ЮЛК</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Кошман</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Кошман</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Инкорт</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Инкорт</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Ренесанс-Трейд Днепр</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Ренесанс_Трейд_Днепр</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Негоциант</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Негоциант</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Крок</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Крок</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Логвиновский</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Логвиновский</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Крок (Сумы)</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Крок_Сумы</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Стронг-Сигал</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Стронг_Сигал</dbTableName>
+    </TableMap>
+    <TableMap>
+      <googleTableName>Акц Континент</googleTableName>
+      <googleTableSheetName>Акция - 20</googleTableSheetName>
+      <dbTableName>dbo.Action_201505_20_Континент</dbTableName>
     </TableMap>
   </TableMaps>
   <connectionString>Persist Security Info=False;Integrated Security=True; database=adb;server=INFORMSQL</connectionString>
@@ -20,10 +315,10 @@
       <TokenUri>https://accounts.google.com/o/oauth2/token</TokenUri>
       <AuthUri>https://accounts.google.com/o/oauth2/auth</AuthUri>
       <AccessCode>4/KLuBGQWLA7tV3Ehb6-IXJCmrnCCGwEe_WUH2PT4dE7M.ojoT7g0iAYUXyjz_MlCJoi16IS64mQI</AccessCode>
-      <AccessToken>ya29.cgEvCx_DjN2tLc2zWD5Uzblip6sBTaJWi9aYREDMXjTtiLA-rfgad2t3Sw7ZzBfYwH7n4ERlvpR9Pw</AccessToken>
+      <AccessToken>ya29.cgFS4ciPMAHGWVY1-ESvIMz9AeeT3QaYRM6-cEDOn_ICm4jS-xeotawt4CArlsTM11clCMyeJcJI0Q</AccessToken>
       <TokenType>Bearer</TokenType>
       <RefreshToken>1/Di6-e1Hckr7jMNLqLIzPOijdecgbQg3fNGRcA3sn4oo</RefreshToken>
-      <TokenExpiry>2015-05-13T16:11:31.1378226+03:00</TokenExpiry>
+      <TokenExpiry>2015-05-13T21:10:47.8275913+03:00</TokenExpiry>
     </parameters>
   </gAuth>
 </DbAdapter>

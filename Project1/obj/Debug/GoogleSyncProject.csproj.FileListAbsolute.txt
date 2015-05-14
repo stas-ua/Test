@@ -37,3 +37,13 @@ D:\GoogleSyncProject\Project1\Project1\Project1\bin\Debug\GoogleSyncProject.pdb
 D:\GoogleSyncProject\Project1\Project1\Project1\obj\Debug\GoogleSyncProject.dll
 D:\GoogleSyncProject\Project1\Project1\Project1\obj\Debug\GoogleSyncProject.pdb
 D:\GoogleSyncProject\Project1\Project1\Project1\obj\Debug\GoogleSyncProject.csprojResolveAssemblyReference.cache
+C:\Users\admin\Source\Repos\Test\Project1\bin\Debug\GoogleSyncProject.dll.config
+C:\Users\admin\Source\Repos\Test\Project1\bin\Debug\GoogleSyncProject.dll
+C:\Users\admin\Source\Repos\Test\Project1\bin\Debug\GoogleSyncProject.pdb
+C:\Users\admin\Source\Repos\Test\Project1\bin\Debug\Google.GData.Client.dll
+C:\Users\admin\Source\Repos\Test\Project1\bin\Debug\Google.GData.Extensions.dll
+C:\Users\admin\Source\Repos\Test\Project1\bin\Debug\Google.GData.Spreadsheets.dll
+C:\Users\admin\Source\Repos\Test\Project1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\Source\Repos\Test\Project1\obj\Debug\GoogleSyncProject.dll
+C:\Users\admin\Source\Repos\Test\Project1\obj\Debug\GoogleSyncProject.pdb
+C:\Users\admin\Source\Repos\Test\Project1\obj\Debug\GoogleSyncProject.csprojResolveAssemblyReference.cache

@@ -46,7 +46,7 @@ using GoogleSync;
                     }
 
                     dbadp.Init();
-                   // dbadp.Sync();
+                    dbadp.Sync();
 
                     Console.WriteLine("Таблицы обновлены");
                     Console.WriteLine();

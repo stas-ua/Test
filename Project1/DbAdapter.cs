@@ -72,12 +72,21 @@ namespace GoogleSync
                             {                                
                                 CellQuery cQuery = new CellQuery(worksheet.CellFeedLink);
                                 //System.Threading.Thread.Sleep(1000); //bjbjbsfs
-                                try { tblMap.cFeed = myService.Query(cQuery); }
-                                catch
+                                int iTry = 0;
+                                bool isSuccessfulTry = false;
+                                while (iTry < 5 && !isSuccessfulTry)
                                 {
-                                    Console.WriteLine();
-                                    throw;
-                                }                                
+                                    try 
+                                    { 
+                                        tblMap.cFeed = myService.Query(cQuery);
+                                        isSuccessfulTry = true;
+                                    }
+                                    catch
+                                    {
+                                        iTry++;
+                                    }  
+                                }
+                                                             
                             }
                         }
                     }

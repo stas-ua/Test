@@ -94,11 +94,11 @@ using GoogleSync;
                     
                 }                
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine("Произошла ошибка: \n" + e.Message);
-                Console.WriteLine();
-               
+                Console.WriteLine();                   
+
             }
 
             if (argStop)

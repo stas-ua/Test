@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="DbAdapter.cs" />
     <Compile Include="GoogleAuth.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="TableMap.cs" />
   </ItemGroup>
   <ItemGroup>

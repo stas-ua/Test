@@ -31,6 +31,9 @@ namespace GoogleSync
         [XmlIgnore]
         private SpreadsheetsService myService { get; set; }
 
+        [XmlIgnore]
+        private Logger log = new Logger();
+
         public DbAdapter()
         {
             FilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GoogleDbAdapter.xml");
@@ -105,7 +108,20 @@ namespace GoogleSync
                 }
 
                 tblMap.LoadRowsToDataTable();
-                tblMap.RewriteRowsToDbTable(connectionString);
+
+                try
+                {
+                    
+                    tblMap.RewriteRowsToDbTable(connectionString);
+                }
+                catch (Exception ex)
+                {
+                    log.Logger("Объект " + ex.Source +
+                        " Метод " + ex.TargetSite +
+                        " Сообщение " + ex.Message +
+                        " Тип исключения" + ex.ToString());
+                }
+                
             }
         }
         

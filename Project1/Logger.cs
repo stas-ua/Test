@@ -7,7 +7,7 @@ using System.IO;
 
 namespace GoogleSync
 {
-    class Logger
+    public class Logger
     {
 
         private string filepath;
@@ -16,13 +16,15 @@ namespace GoogleSync
             filepath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Log.txt"); 
         }
 
-        public void Logger(String lines) {
+        public void WriteLog(String lines) {
 
             Console.WriteLine(lines);
+            Console.WriteLine();
             if (System.IO.Directory.Exists(System.IO.Path.GetDirectoryName(filepath)))
             {
                 System.IO.StreamWriter file = new System.IO.StreamWriter(filepath, true);
                 file.WriteLine(lines);
+                file.WriteLine();
                 file.Close();
             }            
 

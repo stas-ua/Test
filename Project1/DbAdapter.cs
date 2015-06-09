@@ -84,8 +84,14 @@ namespace GoogleSync
                                         tblMap.cFeed = myService.Query(cQuery);
                                         isSuccessfulTry = true;
                                     }
-                                    catch
+                                    catch(Exception ex)
                                     {
+                                        log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
+                                        ", Метод " + ex.TargetSite +
+                                        ", Сообщение " + ex.Message +
+                                        ", Тип исключения" + ex.ToString() +
+                                        ", текущая гугл-таблица " + tblMap.googleTableName + "-" + tblMap.googleTableSheetName +
+                                        ", попытка " + (iTry + 1));
                                         iTry++;
                                     }  
                                 }
@@ -108,20 +114,7 @@ namespace GoogleSync
                 }
 
                 tblMap.LoadRowsToDataTable();
-
-                try
-                {
-                    
-                    tblMap.RewriteRowsToDbTable(connectionString);
-                }
-                catch (Exception ex)
-                {
-                    log.Logger("Объект " + ex.Source +
-                        " Метод " + ex.TargetSite +
-                        " Сообщение " + ex.Message +
-                        " Тип исключения" + ex.ToString());
-                }
-                
+                tblMap.RewriteRowsToDbTable(connectionString);
             }
         }
         
@@ -165,8 +158,12 @@ namespace GoogleSync
                     this.TableMaps = dba.TableMaps;                   
                     return true;
                 }
-                catch 
+                catch (Exception ex)
                 {
+                    log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
+                            ", Метод " + ex.TargetSite +
+                            ", Сообщение " + ex.Message +
+                            ", Тип исключения" + ex.ToString());
 
                 }
             }

@@ -7,4 +7,3 @@ D:\GoogleSyncProject\Project1\Project1\Project1\bin\Release\Google.GData.Spreads
 D:\GoogleSyncProject\Project1\Project1\Project1\bin\Release\Newtonsoft.Json.dll
 D:\GoogleSyncProject\Project1\Project1\Project1\obj\Release\GoogleSyncProject.dll
 D:\GoogleSyncProject\Project1\Project1\Project1\obj\Release\GoogleSyncProject.pdb
-D:\GoogleSyncProject\Project1\Project1\Project1\obj\Release\GoogleSyncProject.csprojResolveAssemblyReference.cache

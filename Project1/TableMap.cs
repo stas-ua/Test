@@ -23,9 +23,7 @@ namespace GoogleSync
         public CellFeed cFeed { get; set; }
 
         [XmlIgnore]
-        public DataTable dTable { get; private set; }
-
-        private string tempTbl = "dbo.tblTempGoogle_" + Guid.NewGuid().ToString("N");
+        public DataTable dTable { get; private set; }        
 
         [XmlIgnore]
         private Logger log = new Logger();
@@ -133,9 +131,10 @@ namespace GoogleSync
                             }
                             catch (SystemException ex)
                             {
-                                log.Logger("Объект " + ex.Source +
-                                    " Метод " + ex.TargetSite +
-                                    " Несовместимый тип в таблице " + this.googleTableName + "-" + this.googleTableSheetName +
+                                log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
+                                    ", Метод " + ex.TargetSite +
+                                    ", Сообщение " + ex.Message +
+                                    ", Несовместимый тип в таблице " + this.googleTableName + "-" + this.googleTableSheetName +
                                     ", в столбце " + dTable.Columns[iCol].ColumnName + 
                                     ", в строке " + iRow);
                             }                            
@@ -149,8 +148,8 @@ namespace GoogleSync
                 dTable.Rows.Add(row);
             }
         }
-
-        public void DeleteRowsFromDbTable(string connectionString)
+            
+        public void RewriteRowsToDbTable(string connectionString)
         {
             if (dTable != null)
             {
@@ -160,33 +159,13 @@ namespace GoogleSync
                     connection.Open();
                     var builder = new SqlCommandBuilder();
                     string escTableName = builder.QuoteIdentifier(this.dbTableName).Replace("[", "").Replace("]", "");
+                    string tempTbl = "dbo.tblTempGoogle_" + Guid.NewGuid().ToString("N");
                     string sqlSelStr = String.Format("select * into {1} from {0};", escTableName, tempTbl);
                     SqlCommand cmd = new SqlCommand(sqlSelStr, connection);
                     cmd.ExecuteNonQuery();
                     string sqlDelStr = String.Format("delete from {0};", escTableName);
                     cmd = new SqlCommand(sqlDelStr, connection);
                     cmd.ExecuteNonQuery();
-                }
-            }
-        }
-
-        public void RestoreDbTable(string connectionString)
-        {
-            //string sqlInsStr = String.Format("insert into {0} select * from {1}; drop table {1};", escTableName, tempTbl);
-            //cmd = new SqlCommand(sqlInsStr, connection);
-            //cmd.ExecuteNonQuery();   
-        }
-    
-        public void WriteRowsToDbTable(string connectionString)
-        {
-            if (dTable != null)
-            {
-                using (SqlConnection connection =
-                       new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    var builder = new SqlCommandBuilder();
-                    string escTableName = builder.QuoteIdentifier(this.dbTableName).Replace("[", "").Replace("]", "");    
 
                     using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connection))
                     {
@@ -195,16 +174,20 @@ namespace GoogleSync
                         try
                         {
                             bulkCopy.WriteToServer(this.dTable);
-                            //string sqlDropStr = String.Format("drop table {0};", tempTbl);
-                            //cmd = new SqlCommand(sqlDropStr, connection);
-                            //cmd.ExecuteNonQuery();
+                            string sqlDropStr = String.Format("drop table {0};", tempTbl);
+                            cmd = new SqlCommand(sqlDropStr, connection);
+                            cmd.ExecuteNonQuery();
                         }
                         catch (Exception ex)
                         {
-                            //string sqlInsStr = String.Format("insert into {0} select * from {1}; drop table {1};", escTableName, tempTbl);
-                            //cmd = new SqlCommand(sqlInsStr, connection);
-                            //cmd.ExecuteNonQuery();                            
-                            throw;   
+                            string sqlInsStr = String.Format("insert into {0} select * from {1}; drop table {1};", escTableName, tempTbl);
+                            cmd = new SqlCommand(sqlInsStr, connection);
+                            cmd.ExecuteNonQuery();
+                            log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
+                            ", Метод " + ex.TargetSite +
+                            ", Сообщение " + ex.Message +
+                            ", Тип исключения" + ex.ToString() + 
+                            ", текущая гугл-таблица " + this.googleTableName + "-" + this.googleTableSheetName );                              
                         }
                     }
                 }

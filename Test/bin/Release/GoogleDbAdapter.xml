@@ -315,10 +315,10 @@
       <TokenUri>https://accounts.google.com/o/oauth2/token</TokenUri>
       <AuthUri>https://accounts.google.com/o/oauth2/auth</AuthUri>
       <AccessCode>4/KLuBGQWLA7tV3Ehb6-IXJCmrnCCGwEe_WUH2PT4dE7M.ojoT7g0iAYUXyjz_MlCJoi16IS64mQI</AccessCode>
-      <AccessToken>ya29.jAHmf9jL5jFDcuIo96tKEt3RDGwydMdYTXs7NH9rvH1g6wu3t2eGuK_GYwT50gcHDsnAO4StB0pwaw</AccessToken>
+      <AccessToken>ya29.jQGPe_I0SC4fWNkgs3lBbKY478WdBNJA9mLbw31QwkiT7BdNc61yruxXS46jrCkgZhbFOkHf_bQpDw</AccessToken>
       <TokenType>Bearer</TokenType>
       <RefreshToken>1/Di6-e1Hckr7jMNLqLIzPOijdecgbQg3fNGRcA3sn4oo</RefreshToken>
-      <TokenExpiry>2015-06-08T16:52:40.7109867+03:00</TokenExpiry>
+      <TokenExpiry>2015-06-09T11:51:11.1122544+03:00</TokenExpiry>
     </parameters>
   </gAuth>
 </DbAdapter>

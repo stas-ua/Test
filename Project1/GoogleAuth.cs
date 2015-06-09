@@ -47,6 +47,9 @@ namespace GoogleSync
             set { parameters.RedirectUri = value; } 
         }
 
+        [XmlIgnore]
+        private Logger log = new Logger();
+
         public OAuth2Parameters parameters { get; set; }
 
         public GoogleAuth()
@@ -87,7 +90,11 @@ namespace GoogleSync
                 Process.Start(prs);
             }
             catch (System.IO.FileNotFoundException ex)          
-            {                
+            {
+                log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
+                            ", Метод " + ex.TargetSite +
+                            ", Сообщение " + ex.Message +
+                            ", Тип исключения" + ex.ToString());
                 prs.FileName = "iexplore.exe";
                 Process.Start(prs);
             }    
@@ -107,13 +114,23 @@ namespace GoogleSync
             }
             catch (System.Net.WebException ex)
             {
+                log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
+                            ", Метод " + ex.TargetSite +
+                            ", Сообщение " + ex.Message +
+                            ", Тип исключения" + ex.ToString());
+
                 if (ex.Status == System.Net.WebExceptionStatus.ProtocolError)
                 {
                     return false;
                 }
             }
             catch (System.ArgumentNullException ex)
-            {                
+            {
+                log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
+                            ", Метод " + ex.TargetSite +
+                            ", Сообщение " + ex.Message +
+                            ", Тип исключения" + ex.ToString());
+
                 if (ex.ParamName == "refresh_token")
                 {
                     return false;

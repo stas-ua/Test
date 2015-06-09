@@ -14,30 +14,28 @@ namespace GoogleSync
         public Logger(bool CheckFileAge = false)
         {
             filepath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Log.txt");
-            if (CheckFileAge)
-            {                
-                if (System.IO.Directory.Exists(System.IO.Path.GetDirectoryName(filepath)))
-                {
-                    string[] lns = System.IO.File.ReadAllLines(filepath);
-                    System.IO.StreamWriter file = new System.IO.StreamWriter(filepath);
 
-                    foreach (string ln in lns)
+            if (CheckFileAge && System.IO.File.Exists(filepath))
+            {   
+                string[] lns = System.IO.File.ReadAllLines(filepath);
+                System.IO.StreamWriter file = new System.IO.StreamWriter(filepath);                
+
+                foreach (string ln in lns)
+                {
+                    if (ln.Length >= 10)
                     {
-                        if (ln.Length >= 10)
+                        DateTime d;
+                        DateTime dPoint = System.DateTime.Now.AddDays(-1);
+                        DateTime.TryParse(ln.Substring(0, 10), out d);
+                        if (d >= dPoint)
                         {
-                            DateTime d;
-                            DateTime dPoint = System.DateTime.Now.AddDays(-1);
-                            DateTime.TryParse(ln.Substring(0, 10), out d);
-                            if (d >= dPoint)
-                            {
-                                file.WriteLine(ln);
-                                file.WriteLine();
-                            }
+                            file.WriteLine(ln);
+                            file.WriteLine();
                         }
                     }
+                }
 
-                    file.Close();
-                } 
+                file.Close();                 
             }            
         }
 

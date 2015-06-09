@@ -10,7 +10,7 @@ using GoogleSync;
     {      
         static void Main(string[] args)
         {
-            Logger log = new Logger();
+            Logger log = new Logger(true);
             bool argStop = true;
             if (args.Length != 0)
             {
@@ -25,11 +25,11 @@ using GoogleSync;
                 
                 if (dbadp.ReadXML())
                 {
-                    log.WriteLog(System.DateTime.Now + ". Файл загружен: " + dbadp.FilePath);
+                    log.WriteLog(null, "Файл загружен: " + dbadp.FilePath);
 
                     if (!dbadp.gAuth.RefreshAccess() && argStop)
                     {
-                        log.WriteLog(System.DateTime.Now + ". Необходимо зарегистрировать приложение.");
+                        log.WriteLog(null, "Необходимо зарегистрировать приложение.");
 
                         Console.WriteLine("Посетите ссылку и вставьте полученый код в строку консоли.\n" +
                             "Нажмите клавишу для продолжения...");                        
@@ -50,12 +50,12 @@ using GoogleSync;
                     dbadp.Init();
                     dbadp.Sync();
 
-                    log.WriteLog(System.DateTime.Now + ". Таблицы обновлены.");                   
+                    log.WriteLog(null, "Таблицы обновлены.");                   
 
                     if(dbadp.WriteXML())
-                        log.WriteLog(System.DateTime.Now + ". Файл сохранен: " + dbadp.FilePath);                                                
+                        log.WriteLog(null, "Файл сохранен: " + dbadp.FilePath);                                                
                     else
-                        log.WriteLog(System.DateTime.Now + ". Файл не сохранен!");  
+                        log.WriteLog(null, "Файл не сохранен!");  
                 }
                 else 
                 {                    
@@ -80,12 +80,12 @@ using GoogleSync;
                         dbadp.connectionString = @"your connectionString";
 
                         dbadp.WriteXML();
-                        log.WriteLog(System.DateTime.Now + ". В папке с программой создан xml файл: \n" + dbadp.FilePath);                        
+                        log.WriteLog(null, "В папке с программой создан xml файл: \n" + dbadp.FilePath);                        
                         Console.WriteLine("Сохраните его со своими параметрами и запустите приложение заново.");
                     }
                     else
                     {
-                        log.WriteLog(System.DateTime.Now + ". Не найден xml файл конфигурации. \n"
+                        log.WriteLog(null, "Не найден xml файл конфигурации. \n"
                                         + "Для его создания, запустите приложение без параметров.");                          
                     }              
                     
@@ -93,20 +93,15 @@ using GoogleSync;
             }
             catch (Exception ex)
             {
-                log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
-                            ", Метод " + ex.TargetSite +
-                            ", Сообщение " + ex.Message +
-                            ", Тип исключения" + ex.ToString());
-                Console.WriteLine();                   
-
+                log.WriteLog(ex);
+                Console.WriteLine();    
             }
 
             if (argStop)
             {
                 Console.WriteLine("Нажмите клафишу для завершения...");                    
                 Console.ReadKey();
-            }
-            
+            }           
 
         }
     }

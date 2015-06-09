@@ -91,10 +91,7 @@ namespace GoogleSync
             }
             catch (System.IO.FileNotFoundException ex)          
             {
-                log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
-                            ", Метод " + ex.TargetSite +
-                            ", Сообщение " + ex.Message +
-                            ", Тип исключения" + ex.ToString());
+                log.WriteLog(ex);
                 prs.FileName = "iexplore.exe";
                 Process.Start(prs);
             }    
@@ -114,10 +111,7 @@ namespace GoogleSync
             }
             catch (System.Net.WebException ex)
             {
-                log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
-                            ", Метод " + ex.TargetSite +
-                            ", Сообщение " + ex.Message +
-                            ", Тип исключения" + ex.ToString());
+                log.WriteLog(ex);
 
                 if (ex.Status == System.Net.WebExceptionStatus.ProtocolError)
                 {
@@ -126,10 +120,7 @@ namespace GoogleSync
             }
             catch (System.ArgumentNullException ex)
             {
-                log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
-                            ", Метод " + ex.TargetSite +
-                            ", Сообщение " + ex.Message +
-                            ", Тип исключения" + ex.ToString());
+                log.WriteLog(ex);
 
                 if (ex.ParamName == "refresh_token")
                 {

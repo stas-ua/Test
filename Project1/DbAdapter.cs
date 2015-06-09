@@ -86,12 +86,8 @@ namespace GoogleSync
                                     }
                                     catch(Exception ex)
                                     {
-                                        log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
-                                        ", Метод " + ex.TargetSite +
-                                        ", Сообщение " + ex.Message +
-                                        ", Тип исключения" + ex.ToString() +
-                                        ", текущая гугл-таблица " + tblMap.googleTableName + "-" + tblMap.googleTableSheetName +
-                                        ", попытка " + (iTry + 1));
+                                        log.WriteLog(ex, "Текущая гугл-таблица " + tblMap.googleTableName + "-" +
+                                            tblMap.googleTableSheetName + ", попытка " + (iTry + 1));
                                         iTry++;
                                     }  
                                 }
@@ -160,11 +156,7 @@ namespace GoogleSync
                 }
                 catch (Exception ex)
                 {
-                    log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
-                            ", Метод " + ex.TargetSite +
-                            ", Сообщение " + ex.Message +
-                            ", Тип исключения" + ex.ToString());
-
+                    log.WriteLog(ex);
                 }
             }
             return false;

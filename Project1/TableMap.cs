@@ -131,10 +131,8 @@ namespace GoogleSync
                             }
                             catch (SystemException ex)
                             {
-                                log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
-                                    ", Метод " + ex.TargetSite +
-                                    ", Сообщение " + ex.Message +
-                                    ", Несовместимый тип в таблице " + this.googleTableName + "-" + this.googleTableSheetName +
+                                log.WriteLog(ex, "Несовместимый тип в таблице " + this.googleTableName + 
+                                    "-" + this.googleTableSheetName +
                                     ", в столбце " + dTable.Columns[iCol].ColumnName + 
                                     ", в строке " + iRow);
                             }                            
@@ -183,11 +181,7 @@ namespace GoogleSync
                             string sqlInsStr = String.Format("insert into {0} select * from {1}; drop table {1};", escTableName, tempTbl);
                             cmd = new SqlCommand(sqlInsStr, connection);
                             cmd.ExecuteNonQuery();
-                            log.WriteLog(System.DateTime.Now + ". Объект " + ex.Source +
-                            ", Метод " + ex.TargetSite +
-                            ", Сообщение " + ex.Message +
-                            ", Тип исключения" + ex.ToString() + 
-                            ", текущая гугл-таблица " + this.googleTableName + "-" + this.googleTableSheetName );                              
+                            log.WriteLog(ex, "Текущая гугл-таблица " + this.googleTableName + "-" + this.googleTableSheetName);                              
                         }
                     }
                 }

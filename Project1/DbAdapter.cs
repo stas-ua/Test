@@ -66,8 +66,26 @@ namespace GoogleSync
                 foreach (SpreadsheetEntry entry in feed.Entries)
                 {
                     if (entry.Title.Text == tblMap.googleTableName)
-                    {                       
-                        WorksheetFeed wShFeed = entry.Worksheets;
+                    {
+                        int iTry = 0;
+                        bool isSuccessfulTry = false;
+
+                        WorksheetFeed wShFeed = null;
+
+                        while (iTry < 5 && !isSuccessfulTry)
+                        {
+                            try
+                            {
+                                wShFeed = entry.Worksheets;
+                                isSuccessfulTry = true;
+                            }
+                            catch (Exception ex)
+                            {
+                                log.WriteLog(ex, "Текущая гугл-таблица " + tblMap.googleTableName + "-" +
+                                    tblMap.googleTableSheetName + ", попытка " + (iTry + 1));
+                                iTry++;
+                            }
+                        }                        
 
                         foreach (WorksheetEntry worksheet in wShFeed.Entries)
                         {
@@ -75,8 +93,8 @@ namespace GoogleSync
                             {                                
                                 CellQuery cQuery = new CellQuery(worksheet.CellFeedLink);
                                 //System.Threading.Thread.Sleep(1000); //bjbjbsfs
-                                int iTry = 0;
-                                bool isSuccessfulTry = false;
+                                iTry = 0;
+                                isSuccessfulTry = false;
                                 while (iTry < 5 && !isSuccessfulTry)
                                 {
                                     try 
